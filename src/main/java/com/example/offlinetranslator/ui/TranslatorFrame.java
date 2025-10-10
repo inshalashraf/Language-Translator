@@ -1,12 +1,27 @@
 package com.example.offlinetranslator.ui;
 
+import java.awt.BorderLayout;
+import java.awt.Cursor;
+import java.awt.FlowLayout;
+import java.awt.Font;
+import java.awt.GridLayout;
+
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JComponent;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.SwingUtilities;
+
 import com.example.offlinetranslator.core.Language;
 import com.example.offlinetranslator.core.TranslationRequest;
 import com.example.offlinetranslator.core.TranslatorLLM;
 import com.example.offlinetranslator.db.HistoryDao;
-
-import javax.swing.*;
-import java.awt.*;
 
 public class TranslatorFrame extends JFrame {
     private final TranslatorLLM llm;
@@ -22,7 +37,7 @@ public class TranslatorFrame extends JFrame {
     private final JTextArea history = new JTextArea(6, 60);
 
     public TranslatorFrame(TranslatorLLM llm, HistoryDao historyDao) {
-        super("Offline Language Translator (Swing)");
+        super("Language Translator (Swing)");
         this.llm = llm;
         this.historyDao = historyDao;
         buildUi();
