@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'com.example'
+version = '0.1.0'
+sourceCompatibility = JavaVersion.VERSION_17
+targetCompatibility = JavaVersion.VERSION_17
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.xerial:sqlite-jdbc:3.46.0.0'
+    implementation 'org.slf4j:slf4j-simple:2.0.16'
+
+    // Optional: simple HTTP client for calling llama-server
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.3'
+}
+
+application {
+    mainClass = 'com.example.offlinetranslator.Main'
+}
+
+tasks.test {
+    useJUnitPlatform()
+}
