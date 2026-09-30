@@ -71,6 +71,9 @@ TranslationResult res = translator.translate(req);
 System.out.println(res.translated());
 ```
 
+## Error Handling
+The application keeps translation failures isolated from the UI flow and supports configurable endpoints. If an online provider is unavailable, check the configured endpoint and network connectivity before retrying.
+
 ## License
 MIT License. See [LICENSE](LICENSE).
 
