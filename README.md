@@ -81,3 +81,6 @@ MIT License. See [LICENSE](LICENSE).
 Pull requests welcome! For major changes, open an issue first to discuss what you would like to change.
 
 ---
+## Testing Notes
+
+Useful checks include translating between supported languages, verifying CLI output, confirming history persistence, and handling an unavailable translation endpoint without interrupting the application flow.
